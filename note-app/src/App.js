@@ -1,7 +1,8 @@
 import React from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import TodoList from './todo/todo'
+import TodoList from './todo/todo';
+import Context from './context'
 
 function App() {
   const [todos, setTodos] = React.useState([
@@ -18,11 +19,16 @@ function App() {
       return todo;
     })
   )}
+  function removeTodo(id) {
+    setTodos(todos.filter(todo => todo.id !== id))
+  }
   return (
+    <Context.Provider value={{removeTodo}}>
     <div className='wrapper'>
     <h1>Hello</h1>
     <TodoList todos={todos} onToggle={toggleTodo}/>
     </div>
+    </Context.Provider>
   );
 }
 
