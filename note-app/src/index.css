@@ -8,3 +8,12 @@ body {
   margin: 0 auto;
   width: 600px;
 }
+.rm{
+  background: blue;
+  border-radius: 50%;
+  color: white;
+  border: none;
+}
+.done{
+  text-decoration: line-through;
+}
