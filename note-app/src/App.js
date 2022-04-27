@@ -1,16 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 import TodoList from './todo/todo';
 import Context from './context';
-import AddTodo from './todo/addTodo'
+import AddTodo from './todo/addTodo';
+
 
 function App() {
-  const [todos, setTodos] = React.useState([
-    {id:1, completed: false, title: 'Buy milk'},
-    {id:2, completed: false, title: 'Buy butter'},
-    {id:3, completed: false, title: 'Buy coffee'}
-  ]);
+  const [todos, setTodos] = React.useState([]);
 
   function toggleTodo(id) {
     setTodos(todos.map(todo => {
@@ -34,9 +31,13 @@ function App() {
   return (
     <Context.Provider value={{removeTodo}}>
     <div className='wrapper'>
-    <h1>Hello</h1>
+    <h1>Todo list</h1>
     <AddTodo onCreate={addTodo}/>
-    {todos.length ? <TodoList todos={todos} onToggle={toggleTodo}/> : <p>No todos</p>}
+    {todos.length ? (
+      <TodoList todos={todos} onToggle={toggleTodo}/>
+    ) : (
+      <p>No todos</p>
+    )}
     </div>
     </Context.Provider>
   );

@@ -1,5 +1,17 @@
 import React, {useState} from 'react';
 
+const styles = {
+  button: {
+    padding: '16px 7px',
+  border: 'none',
+  borderRadius: '0 4px 4px 0',
+  cursor: 'pointer',
+  outline: 'none',
+  background: 'linear-gradient(90deg,rgba(93, 12, 255, 1) 0%,rgba(155, 0, 250, 1) 100%)',
+  color: '#fff',
+  textTransform: 'capitalize'
+  }
+}
 function useInputValue(defaultValue = ''){
   const [value, setValue] = useState(defaultValue);
 
@@ -26,7 +38,7 @@ function AddTodo({onCreate}) {
   return(
     <form style={{marginBottom: '1rem'}} onSubmit={submitHandler} >
      <input {...input.bind}/>
-     <button type='submit'>Add Todo</button>
+     <button style={styles.button} type='submit'>Add Todo</button>
     </form>
   )
 }
