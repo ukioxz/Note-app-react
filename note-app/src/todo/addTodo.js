@@ -2,14 +2,15 @@ import React, {useState} from 'react';
 
 const styles = {
   button: {
-    padding: '16px 7px',
+  padding: '16px 7px',
   border: 'none',
   borderRadius: '0 4px 4px 0',
   cursor: 'pointer',
   outline: 'none',
-  background: 'linear-gradient(90deg,rgba(93, 12, 255, 1) 0%,rgba(155, 0, 250, 1) 100%)',
+  background: 'rgba(144, 217, 153, 0.8)',
   color: '#fff',
-  textTransform: 'capitalize'
+  textTransform: 'capitalize',
+  fontWeight: 'bold'
   }
 }
 function useInputValue(defaultValue = ''){

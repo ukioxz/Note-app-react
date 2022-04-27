@@ -7,7 +7,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '.5rem 1rem',
-    border: '1px solid #ccc',
+    border: '1px solid rgba(144, 217, 153, 0.8)',
     borderRadius: '4px',
     marginBottom: '.5rem'
   },

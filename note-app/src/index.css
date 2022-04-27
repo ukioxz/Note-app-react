@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color:rgba(22, 85, 53, 0.8);
 }
 .wrapper{
   padding-top: 5rem;
@@ -20,7 +21,7 @@ body {
 .wrapper input {
   padding: 14px 100px 14px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
+  border: 2px solid rgba(144, 217, 153, 0.8);
   outline: none;
   background: transparent;
 }
