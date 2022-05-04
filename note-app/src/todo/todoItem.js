@@ -8,8 +8,22 @@ const styles = {
     alignItems: 'center',
     padding: '.5rem 1rem',
     border: '1px solid rgba(144, 217, 153, 0.8)',
-    borderRadius: '4px',
     marginBottom: '.5rem'
+  },
+  itemDelete: {
+  display: 'flex',
+  justifyContent: 'space-between',
+  cursor: 'pointe',
+  fontSize: '22px',
+  marginBottom: '.5rem',
+  padding: '14px',
+  width: '400px',
+  textAlign: 'left',
+  background: 'rgba(144, 217, 153, 0.8)',
+  color: '#fff',
+  border: 'none',
+  borderRadius: '5px',
+  cursor: 'pointer'
   },
   input: {
     marginRight: '1rem'
@@ -23,14 +37,13 @@ function TodoItem({todo, index, onChange}) {
     classes.push('done')
   }
   return(
-  <li style={styles.li}>
+  <li style={styles.itemDelete}>
   <span className={classes.join(' ')}>
   <input
   type="checkBox"
   checked={todo.completed}
   style={styles.input}
   onChange={() => onChange(todo.id)}/>
-  <strong>{index + 1}</strong>
    &nbsp;
   {todo.title}
   </span>

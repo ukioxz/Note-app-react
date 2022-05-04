@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 const styles = {
   button: {
-  padding: '16px 7px',
+  padding: '17px 7px',
   border: 'none',
   borderRadius: '0 4px 4px 0',
   cursor: 'pointer',

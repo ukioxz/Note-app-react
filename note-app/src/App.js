@@ -36,7 +36,7 @@ function App() {
     {todos.length ? (
       <TodoList todos={todos} onToggle={toggleTodo}/>
     ) : (
-      <p>No todos</p>
+      <p>No plans</p>
     )}
     </div>
     </Context.Provider>
