@@ -1,4 +1,4 @@
-#To-do list
+# To-do list
 A simple todo list app built in ReactJS
 
 ## Setup
