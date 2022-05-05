@@ -1,7 +1,18 @@
 import React , {useContext} from 'react';
 import Context from '../context';
+import styled, { keyframes } from 'styled-components';
+import { bounceInRight } from 'react-animations'
+import { bounceOutLeft } from 'react-animations'
+import Radium, {StyleRoot} from 'radium';
+
+const BounceInRight = styled.div`animation: 2s ${keyframes`${bounceInRight}`} `;
+const BounceOutLeft = styled.div`animation: 2s ${keyframes`${bounceOutLeft}`} `;
 
 const styles = {
+  bounceOutLeft: {
+    animation: 'x 1s',
+    animationName: Radium.keyframes(bounceOutLeft, 'bounceOutLeft')
+  },
   li: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -37,7 +48,7 @@ function TodoItem({todo, index, onChange}) {
     classes.push('done')
   }
   return(
-  <li style={styles.itemDelete}>
+  <BounceInRight><li style={styles.itemDelete}>
   <span className={classes.join(' ')}>
   <input
   type="checkBox"
@@ -48,7 +59,7 @@ function TodoItem({todo, index, onChange}) {
   {todo.title}
   </span>
   <button className='rm' onClick={removeTodo.bind(null,todo.id)}>&times;</button>
-  </li>
+  </li></BounceInRight>
 );
 }
 

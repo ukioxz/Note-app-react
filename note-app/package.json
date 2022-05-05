@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "radium": "^0.26.2",
     "react": "^18.0.0",
+    "react-animation": "^1.2.2",
+    "react-animations": "^1.0.0",
     "react-dom": "^18.0.0",
     "react-dynamic-import": "^1.1.5",
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
